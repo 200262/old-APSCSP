@@ -24,9 +24,11 @@ def start():
     elif choice=="5":
         binary=int(input("Binary number?"))
         binary_to_hexadecimal(binary)
+        start()
     elif choice=="6":
         hexa=(input("Hexadecimal number?"))
         hexadecimal_to_binary(hexa)
+        start()
     elif choice=="7":
         exit(0)
     else:

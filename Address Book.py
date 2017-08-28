@@ -1,4 +1,4 @@
-
+from sys import exit
 namelist=[]
 agelist=[]
 numberlist=[]
@@ -30,17 +30,22 @@ def recalluser():
     else:
         print("User not found")
 
+
 def action():
-    whichaction=str(input("Press 1 to input, Press 2 to recall"))
-    if whichaction=="1":
-        inputuser()
-        action()
-    elif whichaction=="2":
-        recalluser()
-        action()
-    else:
-        print ("Action not identified.")
-        action()
+    run=True
+    while run==True:
+        whichaction=str(input("Press 1 to input, Press 2 to recall, Press 3 to quit"))
+        if whichaction=="1":
+            inputuser()
+            action()
+        elif whichaction=="2":
+            recalluser()
+            action()
+        elif whichaction=="3":
+            exit(0)
+        else:
+            print ("Action not identified.")
+            action()
 
 action()
 
